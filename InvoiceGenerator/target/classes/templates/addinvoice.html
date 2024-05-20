@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <title>Add Invoice</title>
+</head>
+<body>
+    <h1>Add Invoice</h1>
+    <form action="#" th:action="@{/invoices/add}" th:object="${invoice}" method="post">
+        Client Name: <input type="text" th:field="*{clientName}"/><br/>
+        Amount: <input type="text" th:field="*{amount}"/><br/>
+        Invoice Date: <input type="datetime-local" th:field="*{invoiceDate}"/><br/>
+        Description: <input type="text" th:field="*{description}"/><br/>
+        <!-- Dropdown list for selecting user -->
+        <input type="submit" value="Submit"/>
+    </form>
+</body>
+</html>

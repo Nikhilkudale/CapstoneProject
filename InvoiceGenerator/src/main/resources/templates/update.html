@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Update Invoice</title>
+</head>
+<body>
+    <h1>Update Invoice</h1>
+    <form th:action="@{/invoices/update}" method="post" th:object="${invoice}">
+        <!-- Updated input fields to match the object properties -->
+        Client Name: <input type="text" th:field="*{clientName}"/><br/>
+        Amount: <input type="text" th:field="*{amount}"/><br/>
+        Invoice Date: <input type="datetime-local" th:field="*{invoiceDate}"/><br/>
+        Description: <input type="text" th:field="*{description}"/><br/>
+        <button type="submit">Update</button>
+    </form>
+</body>
+</html>
